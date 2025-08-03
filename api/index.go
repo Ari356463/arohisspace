@@ -1,21 +1,19 @@
-package handler
+package main
 
 import (
-    "fmt"
     "net/http"
+    "os"
 )
 
-func Handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hello from Go server!")
+func handler(w http.ResponseWriter, r *http.Request) {
+    http.ServeFile(w, r, "public/index.html")
 }
 
-/*
-func main(){
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "index.html")
-	})
-
-	fmt.Println("server is running on https://localhost:8080/")
-	http.ListenAndServe(":8080", nil)
+func main() {
+    port := os.Getenv("PORT")
+    if port == "" {
+        port = "8080"
+    }
+    http.HandleFunc("/", handler)
+    http.ListenAndServe(":"+port, nil)
 }
-*/
