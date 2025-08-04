@@ -12,9 +12,9 @@ export default function Home() {
                 <div className="flex justify-center items-center h-screen">
                     <div className="text-center text-5xl space-y-4">
                         <h1 className="font-['MoonTime']">Hello this space is existing to serve its purpose</h1>
-                        <h1 className="font-['MoonTime']">of directing Arohi's thoughts and her vision of</h1>
+                        <h1 className="font-['MoonTime']">of directing Arohi&apos;s thoughts and her vision of</h1>
                         <h1 className="font-['MoonTime']">seeing the universe towards the existing humans</h1>
-                        <h1 className="font-['MoonTime']">hopefully Arohi's visions would be a pretty sight to visit</h1>
+                        <h1 className="font-['MoonTime']">hopefully Arohi&apos;s visions would be a pretty sight to visit</h1>
                     </div>
                 </div>
             </div>
